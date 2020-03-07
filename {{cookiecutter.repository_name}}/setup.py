@@ -6,20 +6,20 @@ ENTRY_POINTS = '''
 [paste.app_factory]
 main = {{cookiecutter.package_name}}:main
 '''
-APP_CLASSIFIERS = [
+APPLICATION_CLASSIFIERS = [
     'Programming Language :: Python',
     'Framework :: Pyramid',
     'Topic :: Internet :: WWW/HTTP',
     'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
 ]
-APP_REQUIREMENTS = [
+APPLICATION_REQUIREMENTS = [
     # web
     'plaster-pastedeploy',
     'pyramid',
     'pyramid-ipython',
     'waitress',
-    # test
-    'pytest>=3.7.4',
+    # architecture
+    'invisibleroads-posts',
 ]
 TEST_REQUIREMENTS = [
     'pytest-cov',
@@ -35,7 +35,7 @@ setup(
     description='{{cookiecutter.application_name}}',
     long_description=DESCRIPTION,
     long_description_content_type='text/markdown',
-    classifiers=APP_CLASSIFIERS,
+    classifiers=APPLICATION_CLASSIFIERS,
     author='{{cookiecutter.author_name}}',
     author_email='{{cookiecutter.author_email}}',
     url='{{cookiecutter.application_url}}',
@@ -44,5 +44,5 @@ setup(
     include_package_data=True,
     zip_safe=False,
     extras_require={'test': TEST_REQUIREMENTS},
-    install_requires=APP_REQUIREMENTS,
+    install_requires=APPLICATION_REQUIREMENTS,
     entry_points=ENTRY_POINTS)

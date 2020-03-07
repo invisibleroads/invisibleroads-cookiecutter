@@ -18,7 +18,6 @@ dist/
 *.sqlite-journal
 # transient
 *.log
-*.map
 *.tmp
 .DS_Store
 data_*
