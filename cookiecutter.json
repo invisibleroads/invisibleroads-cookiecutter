@@ -1,0 +1,4 @@
+{
+  "repository_name": "invisibleroads-application",
+  "package_name": "{{cookiecutter.repository_name.replace('-', '_')}}"
+}

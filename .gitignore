@@ -1,0 +1,24 @@
+# vim
+*.sw[op]
+*~
+# python
+*.egg
+*.egg-info
+*.py[co]
+.cache
+.coverage
+.ipynb_checkpoints
+.pytest_cache
+__pycache__
+alembic/
+build/
+dist/
+# sqlite
+*.sqlite
+*.sqlite-journal
+# transient
+*.log
+*.map
+*.tmp
+.DS_Store
+data_*
