@@ -1,4 +1,8 @@
 {
-  "repository_name": "invisibleroads-application",
-  "package_name": "{{cookiecutter.repository_name.replace('-', '_')}}"
+  "application_name": "InvisibleRoads Application",
+  "repository_name": "{{cookiecutter.application_name.lower().replace(' ', '-')}}",
+  "package_name": "{{cookiecutter.repository_name.replace('-', '_')}}",
+  "author_name": "CrossCompute Inc.",
+  "author_email": "support@crosscompute.com",
+  "application_url": "https://crosscompute.com"
 }
