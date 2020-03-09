@@ -23,7 +23,9 @@ APPLICATION_REQUIREMENTS = [
     'invisibleroads-posts',
 ]
 TEST_REQUIREMENTS = [
+    'pytest',
     'pytest-cov',
+    'webtest',
 ]
 FOLDER = dirname(abspath(__file__))
 DESCRIPTION = '\n\n'.join(open(join(FOLDER, x)).read().strip() for x in [

@@ -1,5 +1,5 @@
 {
-  "application_name": "InvisibleRoads Application",
+  "application_name": "InvisibleRoads Example",
   "repository_name": "{{cookiecutter.application_name.lower().replace(' ', '-')}}",
   "package_name": "{{cookiecutter.repository_name.replace('-', '_')}}",
   "author_name": "CrossCompute Inc.",
