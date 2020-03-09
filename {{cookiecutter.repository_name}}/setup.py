@@ -9,6 +9,7 @@ main = {{cookiecutter.package_name}}:main
 APPLICATION_CLASSIFIERS = [
     'Programming Language :: Python',
     'Framework :: Pyramid',
+    'Framework :: Pyramid :: InvisibleRoads',
     'Topic :: Internet :: WWW/HTTP',
     'Topic :: Internet :: WWW/HTTP :: WSGI :: Application',
 ]
@@ -39,7 +40,7 @@ setup(
     author='{{cookiecutter.author_name}}',
     author_email='{{cookiecutter.author_email}}',
     url='{{cookiecutter.application_url}}',
-    keywords='web pyramid pylons',
+    keywords='web wsgi bfg pylons pyramid invisibleroads',
     packages=find_packages(),
     include_package_data=True,
     zip_safe=False,
