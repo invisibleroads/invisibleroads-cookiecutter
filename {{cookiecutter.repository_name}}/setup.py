@@ -21,6 +21,9 @@ APPLICATION_REQUIREMENTS = [
     'waitress',
     # architecture
     'invisibleroads-posts',
+{% if cookiecutter.database_package == 'sqlalchemy' -%}
+    'invisibleroads-records',
+{%- endif -%}
 ]
 TEST_REQUIREMENTS = [
     'pytest',

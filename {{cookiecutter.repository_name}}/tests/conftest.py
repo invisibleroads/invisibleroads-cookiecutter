@@ -6,6 +6,9 @@ from {{cookiecutter.package_name}} import main as get_app
 
 pytest_plugins = [
     'invisibleroads_posts.tests',
+{%- if cookiecutter.database_package == 'sqlalchemy' %}
+    'invisibleroads_records.tests',
+{%- endif %}
 ]
 
 
