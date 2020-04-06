@@ -21,9 +21,9 @@ APPLICATION_REQUIREMENTS = [
     'waitress',
     # architecture
     'invisibleroads-posts',
-{% if cookiecutter.database_package == 'sqlalchemy' -%}
+{%- if cookiecutter.database_package == 'sqlalchemy' %}
     'invisibleroads-records',
-{%- endif -%}
+{%- endif %}
 ]
 TEST_REQUIREMENTS = [
     'pytest',
@@ -36,7 +36,7 @@ DESCRIPTION = '\n\n'.join(open(join(FOLDER, x)).read().strip() for x in [
 
 
 setup(
-    name='{{cookiecutter.repository_name}}',
+    name='{{cookiecutter.package_name.replace('_', '-')}}',
     version='0.0.0',
     description='{{cookiecutter.application_name}}',
     long_description=DESCRIPTION,
