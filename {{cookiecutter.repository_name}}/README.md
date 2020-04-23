@@ -12,6 +12,9 @@
 
     source ~/.virtualenvs/{{cookiecutter.repository_name}}/bin/activate
     cd ~/Projects/{{cookiecutter.repository_name}}
+{%- if cookiecutter.database_package == 'sqlalchemy' %}
+    invisibleroads initialize development.ini
+{%- endif %}
     pserve development.ini
 
 ## Deploy
@@ -22,4 +25,9 @@
 
     source ~/.virtualenvs/{{cookiecutter.repository_name}}/bin/activate
     cd ~/Experiments/{{cookiecutter.repository_name}}
+{%- if cookiecutter.database_package == 'sqlalchemy' %}
+    invisibleroads initialize production.ini
+    alembic -c production.ini revision --autogenerate -m 'Start'
+    alembic -c production.ini upgrade head
+{%- endif %}
     pserve production.ini

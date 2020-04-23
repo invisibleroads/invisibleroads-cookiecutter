@@ -20,9 +20,9 @@ APPLICATION_REQUIREMENTS = [
     'pyramid-ipython',
     'waitress',
     # architecture
-    'invisibleroads-posts',
+    'invisibleroads-posts >= 0.7.1',
 {%- if cookiecutter.database_package == 'sqlalchemy' %}
-    'invisibleroads-records',
+    'invisibleroads-records >= 0.5.1',
 {%- endif %}
 ]
 TEST_REQUIREMENTS = [

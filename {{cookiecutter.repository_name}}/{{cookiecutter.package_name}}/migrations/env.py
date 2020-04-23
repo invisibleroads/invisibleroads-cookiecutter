@@ -1,5 +1,5 @@
 from alembic import context
-from invisibleroads_records.models import Base
+from {{cookiecutter.package_name}}.models import Base
 from pyramid.paster import get_appsettings, setup_logging
 from sqlalchemy import engine_from_config
 
