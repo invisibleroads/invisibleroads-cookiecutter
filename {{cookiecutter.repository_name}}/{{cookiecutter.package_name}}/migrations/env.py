@@ -1,7 +1,8 @@
 from alembic import context
-from {{cookiecutter.package_name}}.models import Base
 from pyramid.paster import get_appsettings, setup_logging
 from sqlalchemy import engine_from_config
+
+from {{cookiecutter.package_name}}.models import Base
 
 
 config = context.config
