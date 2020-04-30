@@ -1,1 +1,4 @@
-from invisibleroads_records.models import Base  # noqa: F401
+from invisibleroads_records.models import Base
+
+
+# flake8: noqa: E401
