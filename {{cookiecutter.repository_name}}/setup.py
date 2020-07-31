@@ -16,7 +16,6 @@ APPLICATION_CLASSIFIERS = [
 APPLICATION_REQUIREMENTS = [
     # web
     'plaster-pastedeploy',
-    'pyramid',
     'pyramid-ipython',
     'waitress',
     # architecture
@@ -26,7 +25,6 @@ APPLICATION_REQUIREMENTS = [
 {%- endif %}
 ]
 TEST_REQUIREMENTS = [
-    'pytest',
     'pytest-cov',
     'webtest',
 ]
