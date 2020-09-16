@@ -1,9 +1,10 @@
 {
-  "database_package": ["none", "sqlalchemy"],
+  "security_package": ["none", "users"],
+  "database_package": ["none", "records"],
   "application_url": "https://crosscompute.com",
   "application_name": "InvisibleRoads Example",
   "author_name": "CrossCompute Inc.",
   "author_email": "support@crosscompute.com",
-  "repository_name": "{{cookiecutter.application_name.lower().replace(' ', '-')}}",
-  "package_name": "{{cookiecutter.repository_name.replace('-', '_')}}"
+  "repository_name": "{{ cookiecutter.application_name | lower | replace(' ', '-')}}",
+  "package_name": "{{ cookiecutter.repository_name | replace('-', '_')}}"
 }

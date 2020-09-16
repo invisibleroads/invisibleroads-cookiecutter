@@ -11,7 +11,10 @@ def application(application_request):
 
 
 @fixture
-{%- if cookiecutter.database_package == 'sqlalchemy' %}
+{%- if cookiecutter.security_package == 'users' %}
+def application_request(users_request):
+    yield users_request
+{%- elif cookiecutter.database_package == 'records' %}
 def application_request(records_request):
     yield records_request
 {%- else %}

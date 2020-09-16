@@ -16,15 +16,20 @@ APPLICATION_CLASSIFIERS = [
 APPLICATION_REQUIREMENTS = [
     # web
     'plaster-pastedeploy',
-    'pyramid-ipython',
+    'pyramid',
     'waitress',
     # architecture
-    'invisibleroads-posts >= 0.7.3',
-{%- if cookiecutter.database_package == 'sqlalchemy' %}
-    'invisibleroads-records >= 0.5.2',
+{% if cookiecutter.security_package == 'users' -%}
+    'invisibleroads-users >= 0.6.0',
+{% elif cookiecutter.database_package == 'records' -%}
+    'invisibleroads-records >= 0.5.8.1',
+{%- else %}
+    'invisibleroads-posts >= 0.7.14',
 {%- endif %}
 ]
 TEST_REQUIREMENTS = [
+    'pyramid-ipython',
+    'pytest',
     'pytest-cov',
     'webtest',
 ]
