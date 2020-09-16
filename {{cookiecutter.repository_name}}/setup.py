@@ -19,9 +19,9 @@ APPLICATION_REQUIREMENTS = [
     'pyramid',
     'waitress',
     # architecture
-{% if cookiecutter.security_package == 'users' -%}
+{%- if cookiecutter.security_package == 'users' %}
     'invisibleroads-users >= 0.6.0',
-{% elif cookiecutter.database_package == 'records' -%}
+{%- elif cookiecutter.database_package == 'records' %}
     'invisibleroads-records >= 0.5.8.1',
 {%- else %}
     'invisibleroads-posts >= 0.7.14',
