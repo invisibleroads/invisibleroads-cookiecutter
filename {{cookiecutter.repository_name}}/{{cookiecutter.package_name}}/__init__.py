@@ -4,7 +4,6 @@ from pyramid.config import Configurator
 def main(global_config, **settings):
     with Configurator(settings=settings) as config:
         includeme(config)
-        config.scan('.views')
     return config.make_wsgi_app()
 
 
@@ -17,3 +16,4 @@ def includeme(config):
     config.include('invisibleroads_posts')
     {% endif -%}
     config.include('.routes')
+    config.scan('.views')
