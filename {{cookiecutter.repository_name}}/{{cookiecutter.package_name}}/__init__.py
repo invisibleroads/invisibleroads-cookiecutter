@@ -8,12 +8,12 @@ def main(global_config, **settings):
 
 
 def includeme(config):
+    config.include('invisibleroads_posts')
+    {% if cookiecutter.database_package == 'records' -%}
+    config.include('invisibleroads_records')
+    {% endif -%}
     {% if cookiecutter.security_package == 'users' -%}
     config.include('invisibleroads_users')
-    {% elif cookiecutter.database_package == 'records' -%}
-    config.include('invisibleroads_records')
-    {% else -%}
-    config.include('invisibleroads_posts')
     {% endif -%}
     config.include('.routes')
     config.scan('.views')

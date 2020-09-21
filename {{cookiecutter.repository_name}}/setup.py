@@ -20,11 +20,11 @@ APPLICATION_REQUIREMENTS = [
     'waitress',
     # architecture
 {%- if cookiecutter.security_package == 'users' %}
-    'invisibleroads-users >= 0.6.0',
+    'invisibleroads-users >= 0.6.2',
 {%- elif cookiecutter.database_package == 'records' %}
-    'invisibleroads-records >= 0.5.8.1',
+    'invisibleroads-records >= 0.5.9',
 {%- else %}
-    'invisibleroads-posts >= 0.7.14',
+    'invisibleroads-posts >= 0.7.15',
 {%- endif %}
 ]
 TEST_REQUIREMENTS = [
